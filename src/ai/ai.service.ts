@@ -32,7 +32,7 @@ export class AiService implements OnModuleInit {
     }
     try {
       const result = await this.model.generateContent(prompt);
-      const response = await result.response;
+      const response = result.response;
       const text = response.text();
       this.logger.log(`Generated response for prompt: "${prompt}"`);
       return text;
